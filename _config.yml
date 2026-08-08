@@ -5,6 +5,7 @@ theme: minima
 author:
   name: Udaya Sankar
 
+github_username: uday0214
 permalink: /blog/:year/:month/:day/:title/
 
 header_pages:
