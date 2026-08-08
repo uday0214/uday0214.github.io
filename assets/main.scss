@@ -13,6 +13,7 @@
   --surface: #ffffff;
   --surface-soft: #eef3fb;
   --text: #0b1220;
+  --heading: #0b1220;
   --muted: #5b6879;
   --faint: #8793a3;
   --border: #dce3ed;
@@ -72,6 +73,15 @@ a {
 a:hover {
   color: var(--accent-strong);
   text-decoration-thickness: 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
 }
 
 img {
@@ -170,7 +180,7 @@ img {
 }
 
 .site-brand__copy strong {
-  color: var(--text);
+  color: var(--heading);
   font-size: 0.94rem;
   letter-spacing: -0.015em;
 }
@@ -239,7 +249,7 @@ img {
 .home-hero__copy h1 {
   max-width: 760px;
   margin: 0;
-  color: var(--text);
+  color: var(--heading);
   font-size: clamp(3.25rem, 7.2vw, 6.6rem);
   font-weight: 820;
   letter-spacing: -0.07em;
@@ -359,7 +369,7 @@ img {
 
 .focus-panel__label {
   margin: 0 0 1rem;
-  color: var(--text);
+  color: var(--heading);
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -392,7 +402,7 @@ img {
 }
 
 .focus-list strong {
-  color: var(--text);
+  color: var(--heading);
   font-size: 0.95rem;
 }
 
@@ -427,7 +437,7 @@ img {
 
 .section-heading h2 {
   margin: 0;
-  color: var(--text);
+  color: var(--heading);
   font-size: clamp(2rem, 4vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -0.055em;
@@ -472,7 +482,7 @@ img {
 
 .path-card h3 {
   margin: auto 0 0.45rem;
-  color: var(--text);
+  color: var(--heading);
   font-size: 1.35rem;
   font-weight: 780;
   letter-spacing: -0.035em;
@@ -560,7 +570,7 @@ img {
 }
 
 .post-card__title a {
-  color: var(--text);
+  color: var(--heading);
   text-decoration: none;
 }
 
@@ -619,7 +629,7 @@ img {
 
 .page-header h1 {
   margin: 0;
-  color: var(--text);
+  color: var(--heading);
   font-size: clamp(3rem, 7vw, 5.8rem);
   font-weight: 820;
   letter-spacing: -0.07em;
@@ -652,7 +662,7 @@ img {
 
 .empty-state h3 {
   margin: 0;
-  color: var(--text);
+  color: var(--heading);
   font-size: 1.4rem;
   letter-spacing: -0.035em;
 }
@@ -731,7 +741,7 @@ img {
 .article-header h1 {
   max-width: 900px;
   margin: 1.3rem 0 0;
-  color: var(--text);
+  color: var(--heading);
   font-size: clamp(3rem, 7vw, 5.9rem);
   font-weight: 820;
   letter-spacing: -0.075em;
@@ -787,7 +797,7 @@ img {
 .prose h2,
 .prose h3,
 .prose h4 {
-  color: var(--text);
+  color: var(--heading);
   font-weight: 780;
   letter-spacing: -0.04em;
   line-height: 1.2;
@@ -939,6 +949,7 @@ pre code {
     --surface: #0e1b2d;
     --surface-soft: #14243a;
     --text: #e7edf7;
+    --heading: #ffffff;
     --muted: #9ba9bc;
     --faint: #718096;
     --border: #22324a;
