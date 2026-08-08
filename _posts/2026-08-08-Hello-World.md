@@ -3,6 +3,7 @@ layout: post
 title: "Hello World"
 date: 2026-08-08
 categories: blog
+description: The first note in a new learning-in-public journey.
 ---
 
 This is my first test post on this GitHub page. I might delete this later 😊!

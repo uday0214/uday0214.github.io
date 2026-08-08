@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="interior-page site-shell">
+  <header class="page-header">
+    {%- if page.kicker -%}<p class="eyebrow">{{ page.kicker }}</p>{%- endif -%}
+    <h1>{{ page.title | escape }}</h1>
+    {%- if page.description -%}
+      <p class="page-header__lede">{{ page.description }}</p>
+    {%- endif -%}
+  </header>
+
+  <div class="page-body prose{% if page.wide %} page-body--wide{% endif %}">
+    {{ content }}
+  </div>
+</article>

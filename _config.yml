@@ -1,5 +1,9 @@
 title: Udaya Sankar
 description: Computer Science, Programming & Learning In Public
+url: "https://uday0214.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Kolkata
 theme: minima
 
 author:

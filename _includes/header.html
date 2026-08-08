@@ -1,0 +1,41 @@
+<header class="site-header" role="banner">
+  <div class="site-shell site-header__inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <span class="site-brand__mark" aria-hidden="true">U</span>
+      <span class="site-brand__copy">
+        <strong>{{ site.title }}</strong>
+        <small>CS · Code · Learning</small>
+      </span>
+    </a>
+
+    <input class="nav-trigger" id="nav-trigger" type="checkbox">
+    <label class="nav-toggle" for="nav-trigger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      {%- for path in site.header_pages -%}
+        {%- assign nav_page = site.pages | where: "path", path | first -%}
+        {%- if nav_page.title -%}
+          {%- assign nav_active = false -%}
+          {%- if page.url == nav_page.url -%}
+            {%- assign nav_active = true -%}
+          {%- elsif nav_page.url == '/blog/' and page.url contains '/blog/' -%}
+            {%- assign nav_active = true -%}
+          {%- endif -%}
+          <a
+            class="nav-link{% if nav_active %} is-active{% endif %}"
+            href="{{ nav_page.url | relative_url }}"
+            {% if nav_active %}aria-current="page"{% endif %}
+          >{{ nav_page.title | escape }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+
+      <a class="nav-link nav-link--external" href="https://github.com/{{ site.github_username }}">
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
+  </div>
+</header>

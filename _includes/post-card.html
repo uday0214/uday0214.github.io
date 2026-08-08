@@ -1,0 +1,21 @@
+{%- assign card_category = include.post.categories | first | default: "Note" -%}
+<article class="post-card">
+  <div class="post-card__meta">
+    <span class="post-card__type">{{ card_category | replace: "-", " " | capitalize }}</span>
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">
+      {{ include.post.date | date: "%b %-d, %Y" }}
+    </time>
+  </div>
+
+  <h3 class="post-card__title">
+    <a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
+  </h3>
+
+  <p class="post-card__excerpt">
+    {{ include.post.excerpt | strip_html | normalize_whitespace | truncate: 145 }}
+  </p>
+
+  <a class="post-card__link" href="{{ include.post.url | relative_url }}" aria-label="Read {{ include.post.title | escape }}">
+    Read note <span aria-hidden="true">→</span>
+  </a>
+</article>

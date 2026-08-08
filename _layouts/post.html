@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- assign post_category = page.categories | first | default: "Article" -%}
+{%- assign word_count = content | number_of_words -%}
+{%- assign reading_time = word_count | divided_by: 180 | plus: 1 -%}
+
+<article class="article site-shell">
+  <a class="article__back" href="{{ '/blog/' | relative_url }}">
+    <span aria-hidden="true">←</span> Back to writing
+  </a>
+
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-meta__type">{{ post_category | replace: "-", " " | capitalize }}</span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{{ reading_time }} min read</span>
+    </div>
+
+    <h1>{{ page.title | escape }}</h1>
+
+    {%- if page.description -%}
+      <p class="article-header__lede">{{ page.description }}</p>
+    {%- endif -%}
+  </header>
+
+  <div class="article-divider" aria-hidden="true"></div>
+
+  <div class="article-content prose">
+    {{ content }}
+  </div>
+
+  <footer class="article-footer">
+    <p>Thanks for reading.</p>
+    <a class="text-link" href="{{ '/blog/' | relative_url }}">More notes <span aria-hidden="true">→</span></a>
+  </footer>
+</article>
