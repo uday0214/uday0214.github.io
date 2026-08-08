@@ -4,3 +4,11 @@ theme: minima
 
 author:
   name: Udaya Sankar
+
+permalink: /blog/:year/:month/:day/:title/
+
+header_pages:
+  - blog.md
+  - til.md
+  - projects.md
+  - about.md
