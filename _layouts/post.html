@@ -7,7 +7,7 @@ layout: default
 
 <article class="article site-shell">
   <a class="article__back" href="{{ '/blog/' | relative_url }}">
-    <span aria-hidden="true">←</span> Back to writing
+    <span aria-hidden="true">←</span> Index / Writing
   </a>
 
   <header class="article-header">
@@ -18,7 +18,7 @@ layout: default
       <span>{{ reading_time }} min read</span>
     </div>
 
-    <h1>{{ page.title | escape }}</h1>
+    <h1>{{ page.title | escape }}<span>.</span></h1>
 
     {%- if page.description -%}
       <p class="article-header__lede">{{ page.description }}</p>
@@ -32,7 +32,7 @@ layout: default
   </div>
 
   <footer class="article-footer">
-    <p>Thanks for reading.</p>
-    <a class="text-link" href="{{ '/blog/' | relative_url }}">More notes <span aria-hidden="true">→</span></a>
+    <p>End of file <span>■</span></p>
+    <a class="text-link" href="{{ '/blog/' | relative_url }}">More notes <span aria-hidden="true">↗</span></a>
   </footer>
 </article>

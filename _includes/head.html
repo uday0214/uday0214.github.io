@@ -10,13 +10,15 @@
   {%- endif -%}
 
   <meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f8fc">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#07111f">
+  <meta name="theme-color" content="#080808">
   <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
   <meta property="og:description" content="{{ meta_description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 
   {%- include head-custom.html -%}

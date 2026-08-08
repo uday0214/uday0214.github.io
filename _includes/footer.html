@@ -1,21 +1,13 @@
 <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <div class="custom-footer">
-
-      <p>
-        © {{ "now" | date: "%Y" }} Uday
-      </p>
-
-      <p>
-        <a href="https://github.com/uday0214">
-          GitHub
-        </a>
-      </p>
-
+  <div class="site-shell custom-footer">
+    <div class="footer-brand">
+      <span class="footer-brand__mark">US.</span>
+      <p>Thinking in systems.<br>Learning in public.</p>
     </div>
-
+    <div class="footer-meta">
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="https://github.com/{{ site.github_username }}">GitHub ↗</a>
+      <p>© {{ "now" | date: "%Y" }} Udaya Sankar</p>
+    </div>
   </div>
-
 </footer>

@@ -1,10 +1,10 @@
 <header class="site-header" role="banner">
   <div class="site-shell site-header__inner">
     <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-      <span class="site-brand__mark" aria-hidden="true">U</span>
+      <span class="site-brand__mark" aria-hidden="true">US<span>.</span></span>
       <span class="site-brand__copy">
         <strong>{{ site.title }}</strong>
-        <small>CS · Code · Learning</small>
+        <small>Student / Developer</small>
       </span>
     </a>
 
@@ -16,6 +16,12 @@
     </label>
 
     <nav class="site-nav" aria-label="Primary navigation">
+      <a
+        class="nav-link{% if page.url == '/' %} is-active{% endif %}"
+        href="{{ '/' | relative_url }}"
+        {% if page.url == '/' %}aria-current="page"{% endif %}
+      ><span>00</span>Home</a>
+
       {%- for path in site.header_pages -%}
         {%- assign nav_page = site.pages | where: "path", path | first -%}
         {%- if nav_page.title -%}
@@ -29,7 +35,7 @@
             class="nav-link{% if nav_active %} is-active{% endif %}"
             href="{{ nav_page.url | relative_url }}"
             {% if nav_active %}aria-current="page"{% endif %}
-          >{{ nav_page.title | escape }}</a>
+          ><span>0{{ forloop.index }}</span>{{ nav_page.title | escape }}</a>
         {%- endif -%}
       {%- endfor -%}
 

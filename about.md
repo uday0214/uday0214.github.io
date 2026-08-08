@@ -6,13 +6,13 @@ kicker: Profile
 description: A computer science student learning carefully, building consistently, and documenting the process.
 ---
 
-I use this site as a public notebook for the ideas and skills I want to understand deeply—not just remember long enough to pass an exam or finish a project.
+Hello! I’m Uday, a CSE Undergraduate First Year Student.
+
+I will be documenting my experiences, thoughts and learnings related to computer science throughout my tech journey.
 
 ## What I’m focused on
 
-- Strengthening my computer science and programming foundations.
-- Building software and learning from the decisions behind it.
-- Turning useful lessons into explanations I can revisit and share.
+- Learning about computers and having fun while doing it.
 
 ## Why write in public?
 

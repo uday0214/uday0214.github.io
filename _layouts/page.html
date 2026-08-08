@@ -3,11 +3,17 @@ layout: default
 ---
 <article class="interior-page site-shell">
   <header class="page-header">
-    {%- if page.kicker -%}<p class="eyebrow">{{ page.kicker }}</p>{%- endif -%}
-    <h1>{{ page.title | escape }}</h1>
-    {%- if page.description -%}
-      <p class="page-header__lede">{{ page.description }}</p>
-    {%- endif -%}
+    <p class="page-header__index">[ {{ page.kicker | default: 'Index' }} ]</p>
+    <div class="page-header__title">
+      <h1>{{ page.title | escape }}<span>.</span></h1>
+      <span class="page-header__code">PAGE / {{ page.title | slice: 0 | upcase }}</span>
+    </div>
+    <div class="page-header__summary">
+      <span aria-hidden="true">↳</span>
+      {%- if page.description -%}
+        <p class="page-header__lede">{{ page.description }}</p>
+      {%- endif -%}
+    </div>
   </header>
 
   <div class="page-body prose{% if page.wide %} page-body--wide{% endif %}">
