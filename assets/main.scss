@@ -2,7 +2,7 @@
 ---
 
 :root {
-  color-scheme: dark;
+  color-scheme: only dark;
   --bg: #080808;
   --surface: #101010;
   --surface-raised: #151515;
@@ -36,7 +36,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg);
+  background: #080808;
 }
 
 body {
@@ -45,13 +45,46 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background: var(--bg);
+  background: #080808;
   color: var(--text);
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/*
+ * This portfolio intentionally has one visual theme. Re-declaring the palette
+ * in both preference branches prevents OS or browser theme heuristics from
+ * substituting colors while keeping the result identical for every visitor.
+ */
+@media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: only dark;
+    --bg: #080808;
+    --surface: #101010;
+    --surface-raised: #151515;
+    --surface-soft: #1a1817;
+    --text: #eeeae4;
+    --heading: #fffdfa;
+    --muted: #9c9892;
+    --faint: #68645f;
+    --border: #292725;
+    --border-strong: #3b3835;
+    --accent: #f04444;
+    --accent-bright: #ff5c57;
+    --accent-deep: #aa2026;
+    --accent-soft: #2b1112;
+    --code-bg: #050505;
+    --code-text: #dad5cf;
+  }
+
+  html,
+  body {
+    background-color: #080808;
+    color: #eeeae4;
+  }
 }
 
 body::before {
