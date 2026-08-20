@@ -13,6 +13,7 @@ I will be documenting my experiences, thoughts and learnings related to computer
 ## What I’m focused on
 
 - Learning about computers and having fun while doing it.
+- Learning to build
 
 ## Why write in public?
 
